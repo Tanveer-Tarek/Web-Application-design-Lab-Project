@@ -1,0 +1,118 @@
+
+</<html>
+    <head><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+<script>
+    function validateForm() {
+        
+        var mail =
+document.forms.RegForm.email.value; 
+var regEmail=/^[a-zA-Z0-9_!#$%&'*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$/;
+if (regEmail.test(mail)) {
+window.alert("Email accepted");
+}
+else
+{ 
+window.alert(" Email not accepted, Please enter correctly");
+return false;
+}
+{
+    var phone =
+                document.forms.RegForm.phone.value;
+            var regphone= /^\d+$/;
+        
+            if (regphone.test(phone)&&phone.length==11){
+                window.alert("Phone Number accepted");
+            }
+            else
+                { 
+                    window.alert("Phone Number is not Valid, Please enter correctly");
+                    return false;}
+}
+{
+var pwd =
+document.forms.RegForm.pass.value; 
+var regPwd=/^\w+$/;
+if (regPwd.test(pwd) && pwd.length >= 8) {
+    window.alert("Password Accepted");
+    window.Location.href="page2.html";
+
+return true;
+}
+else{ 
+window.alert(" Password not accepted, Please enter correctly");
+return false;
+}
+}
+}
+       
+    
+</script>
+
+
+</head>
+<style>
+body{
+    background-color:#B5E63C ;
+}
+h5{
+background-color:aqua;
+font-family:"Lucida Console", "Courier New", monospace;
+font-size:15;
+}
+form{
+    color:blue;
+    background-color:bisque;
+}
+.one{
+    padding-left: 90px;
+}
+h4{
+    font-family: "Sofia", sans-serif;
+    background-color:#ADD8E6;
+    color: rgb(226, 19, 133);
+    font-size:50;
+	padding-top:25 px;
+	padding-bottom: 25 px;
+}
+h6{
+    font-size:15;
+    color:black;
+}
+img{
+border-radius:50%;
+}
+a{
+    color:rgb(19, 211, 224);
+}
+.l1{
+    font-family: "Sofia", sans-serif;
+    background-color:#ADD8E6;
+    color: rgb(226, 19, 133);
+    font-size:50;
+	padding-top:25 px;
+	padding-bottom: 25 px;
+}</style>
+<body>
+    <h4><center><img src="download.png" width="50" height="50" alt="Avater">Let's Go</center></h4>
+<h5><center><i>Welcome to Bangladeshi One of the Best Ride Sharing Service.</i></h5>
+    <h6><center><b><u>Please Sign in:</u></b></h6>
+    <form autocomplete="on" name="RegForm" onsubmit="return validateForm()" method="post"><hr>
+        
+        <label for="email"><b>Email:</b></label>
+        <input type="text"placeholder="Enter your Email Address "name="email" id="email"><br><br>
+        <label for="phone"><b>Mobile No. :</b></label>
+        <input type="text"placeholder="Enter your Phone No."name="phone" id="phone"><br><br>
+        <label for="pass"><b>Password     :</b></label>
+        <input type="text"placeholder="Password must be more than 8 digit"name="pass" id="pass" required ><br>
+        <p class="one"><u><a href="">Forget Password</a></u></p>
+		<p class="one"><u><a href="">Creat a new account</a></u></p>
+       
+        <input type="submit" value="Done" name="Submit" ><br>
+		<button type="submit" value="Done" name="Submit" class="btn btn-success"><a href="./page2.html">Log In</a></button></a><br><br>
+
+        </hr></form>
+		</body>
+		</html>
+        
